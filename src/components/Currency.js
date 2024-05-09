@@ -6,9 +6,10 @@ const Currency = () => {
     const { dispatch } = useContext(AppContext);
 
     const handleCurrencyChange = (event) => {
+        const symbol = event.target.value
         dispatch({
             type: 'CHG_CURRENCY',
-            payload: event.target.value,
+            payload: symbol,
         });
     }
 
