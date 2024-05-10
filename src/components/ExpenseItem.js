@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { TiDelete } from 'react-icons/ti';
 import { AppContext } from '../context/AppContext';
+import { FaPlus } from 'react-icons/fa'; // Import the plus icon from react-icons
+import { FaMinus } from 'react-icons/fa'; // Import the plus icon from react-icons
 
 const ExpenseItem = (props) => {
     const { dispatch, currency } = useContext(AppContext);
@@ -27,10 +28,12 @@ const ExpenseItem = (props) => {
 
     return (
         <tr>
-        <td>{props.name}</td>
-        <td>{currency}{props.cost}</td>
-        <td><button onClick={event=> increaseAllocation(props.name)}>+</button></td>
-        <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
+            <td>{props.name}</td>
+            <td>{currency}{props.cost}</td>
+            <td><button className="plus-icon-btn" onClick={() => increaseAllocation(props.name)}><FaPlus className="plus-icon" /></button></td>
+            {/* <td><button className="minus-icon-btn" onClick={handleDeleteExpense}><FaPlus className="plus-icon" /></button></td> */}
+            <td><button className="minus-icon-btn" onClick={handleDeleteExpense}><FaMinus className="minus-icon" /></button></td>
+            {/* <td><TiDelete size='1.5em' onClick={handleDeleteExpense} /></td> */}
         </tr>
     );
 };

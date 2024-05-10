@@ -50,3 +50,41 @@
     color: #155724; /* Same as the alert text color */
   }
 
+/* Plus button */
+.plus-icon-btn {
+    background-color: green;
+    border: none;
+    border-radius: 50%;
+    padding: 3px; /* Adjust the padding to make the circle smaller */
+    cursor: pointer;
+    display: flex; /* Ensure proper alignment of the icon */
+    align-items: center; /* Align icon vertically */
+    justify-content: center; /* Align icon horizontally */
+}
+
+.plus-icon {
+    color: white;
+    font-size: 12px; /* Adjust the font size as needed */
+}
+
+
+
+/* Minus button*/
+.minus-icon-btn {
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minus-icon {
+    color: white;
+}
+
+
+
+
